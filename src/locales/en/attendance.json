@@ -1,0 +1,9 @@
+{
+    "title": "Attendance History",
+    "checkIn": "Check In",
+    "checkOut": "Check Out",
+    "date": "Date",
+    "time": "Time",
+    "status": "Status",
+    "location": "Location"
+  }

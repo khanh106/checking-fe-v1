@@ -1,0 +1,9 @@
+{
+    "title": "Work Location",
+    "address": "Address",
+    "latitude": "Latitude",
+    "longitude": "Longitude",
+    "status": "Status",
+    "active": "Active",
+    "inactive": "Inactive"
+  }

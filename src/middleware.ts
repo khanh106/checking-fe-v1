@@ -16,7 +16,7 @@ export function middleware(request: NextRequest) {
     const callbackUrl = new URL("/auth/callback", request.url).toString()
     loginUrl.searchParams.set("redirect_uri", callbackUrl)
 
-    const APP_KEY = "xJhGznIP5u8jA24YwKDH"
+    const APP_KEY = "YFtUnSRwEc4Dy6pjBVr8"
     loginUrl.searchParams.set("key", APP_KEY)
     console.log(`Chưa đăng nhập, đang chuyển hướng đến: ${loginUrl.toString()}`)
     return NextResponse.redirect(loginUrl)
@@ -28,3 +28,16 @@ export function middleware(request: NextRequest) {
 export const config = {
   matcher: ["/((?!api|_next/static|_next/image|favicon.ico).*)"],
 }
+
+
+// import { NextResponse } from "next/server"
+// import type { NextRequest } from "next/server"
+
+
+// export function middleware(request: NextRequest) {
+//   return NextResponse.next()
+// }
+
+// export const config = {
+//   matcher: ["/((?!api|_next/static|_next/image|favicon.ico).*)"],
+// }
