@@ -1,5 +1,4 @@
 import AlertProvider from "./AlertProvider"
-import AuthProvider from "./AuthProvider"
 import CustomIntlProvider from "./CustomIntlProvider"
 import ProviderQueryClient from "./QueryClientProvider"
 import { NuqsAdapter } from "nuqs/adapters/next/app"
@@ -14,7 +13,7 @@ export default function AppProvider({ children }: AppProviderProps) {
       <CustomIntlProvider>
         <ProviderQueryClient>
           <AlertProvider>
-            <AuthProvider>{children}</AuthProvider>
+          {children}
           </AlertProvider>
         </ProviderQueryClient>
       </CustomIntlProvider>

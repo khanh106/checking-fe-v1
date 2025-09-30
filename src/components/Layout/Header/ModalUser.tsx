@@ -6,7 +6,7 @@ import { EBox } from "@/elements/EBox/EBox"
 import { EText } from "@/elements/EText/EText"
 import { Flex } from "@/elements/Flex/Flex"
 import { cn } from "@/lib/utils"
-import { useLogout } from "@/services/react-query/psvn-auth/mutations/auth"
+import { useLogout } from "@/hooks/use-logout"
 import { useStore } from "@/store"
 import { ChevronRightFilled, QuestionCircleFilled, SettingsFilled, SignOutFilled } from "@fluentui/react-icons"
 import { useTranslations } from "next-intl"
@@ -20,7 +20,7 @@ export const ModalUser = () => {
     return (userInfo?.fullName ?? userInfo?.username)?.slice(0, 2).toUpperCase() || ""
   }, [userInfo])
 
-  const { mutate: logout } = useLogout()
+  const { logout } = useLogout()
 
   const menuItems = [
     {

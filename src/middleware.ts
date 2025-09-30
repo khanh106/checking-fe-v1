@@ -16,7 +16,7 @@ export function middleware(request: NextRequest) {
     const callbackUrl = new URL("/auth/callback", request.url).toString()
     loginUrl.searchParams.set("redirect_uri", callbackUrl)
 
-    const APP_KEY = "Gf0WuWOrXxKhxRfGcleO"
+    const APP_KEY = "xJhGznIP5u8jA24YwKDH"
     loginUrl.searchParams.set("key", APP_KEY)
     console.log(`Chưa đăng nhập, đang chuyển hướng đến: ${loginUrl.toString()}`)
     return NextResponse.redirect(loginUrl)
