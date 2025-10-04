@@ -3,7 +3,6 @@
 import { cn } from "@/lib/utils"
 import { Slot } from "@radix-ui/react-slot"
 import { cva, type VariantProps } from "class-variance-authority"
-import { useTranslations } from "next-intl"
 
 const textVariants = cva("", {
   variants: {
@@ -48,17 +47,14 @@ const textVariants = cva("", {
 export type ETextVariantType = VariantProps<typeof textVariants>
 
 export type ETextProps = React.ComponentProps<"span"> &
-  ETextVariantType & {
-    text?: string | number | null
-    tx?: string
-    txOptions?: Record<string, string | number>
-    as?: React.ElementType
-    asChild?: boolean
-  }
+ETextVariantType & {
+  text?: string | number | null
+  as?: React.ElementType
+  asChild?: boolean
+}
 
-export const EText = ({ text, tx, txOptions, size, weight, className, as = "span", asChild = false, children, ...rest }: ETextProps) => {
-  const t = useTranslations()
-  const content = children || (typeof text === "number" || text ? text.toString() : tx ? (txOptions ? t(tx, txOptions) : t(tx)) : "")
+export const EText = ({ text, size, weight, className, as = "span", asChild = false, children, ...rest }: ETextProps) => {
+  const content = children || (typeof text === "number" || text ? text.toString() : "")
 
   const Component = asChild ? Slot : as
 

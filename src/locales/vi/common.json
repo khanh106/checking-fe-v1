@@ -1,12 +1,15 @@
 {
-    "loading": "Đang tải...",
-    "error": "Có lỗi xảy ra",
-    "success": "Thành công",
-    "cancel": "Hủy",
-    "confirm": "Xác nhận",
-    "save": "Lưu",
-    "edit": "Sửa",
-    "delete": "Xóa",
-    "back": "Quay lại",
-    "next": "Tiếp theo"
-  }
+  "loading": "Đang tải...",
+  "error": "Có lỗi xảy ra",
+  "success": "Thành công",
+  "cancel": "Hủy",
+  "confirm": "Xác nhận",
+  "save": "Lưu",
+  "edit": "Sửa",
+  "delete": "Xóa",
+  "back": "Quay lại",
+  "next": "Tiếp theo",
+  "MODAL_USER_SETTINGS_AND_PRIVACY_BUTTON": "Cài đặt & Quyền riêng tư",
+  "MODAL_USER_HELP_AND_SUPPORT_BUTTON": "Trợ giúp & Hỗ trợ",
+  "MODAL_USER_LOGOUT_BUTTON": "Đăng xuất"
+}

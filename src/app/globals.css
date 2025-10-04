@@ -3,6 +3,7 @@
 
 @custom-variant dark (&:is(.dark *));
 
+
 @theme {
   /* Shadow */
   --shadow-4: 0px 8px 32px 0px rgba(0, 0, 0, 0.08);
@@ -83,7 +84,7 @@
   --secondary: var(--neutral-3);
   --secondary-foreground: var(--neutral-10);
   --muted: var(--neutral-3);
-  --muted-foreground: var(--neutral-6);
+  --muted-foreground: var(--neutral-7);
   --accent: var(--neutral-3);
   --accent-foreground: var(--neutral-10);
   --destructive: var(--red-5);
@@ -180,6 +181,22 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 
 /* Css cho album images */
+
+.flex-1 {
+  will-change: width;
+  transform: translateZ(0);
+}
+
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
 .thumb-slide::before {
   content: "";
   position: absolute;
@@ -192,4 +209,23 @@ input[type="number"]::-webkit-inner-spin-button {
   background: transparent;
   border: 4px solid #13c2c2;
   outline-offset: -4px;
+}
+
+
+.sidebar-transition {
+  transition: margin-left 0.3s ease-in-out;
+}
+
+[data-sidebar="sidebar"] {
+  transition: width 300ms ease-in-out !important;
+}
+.sidebar-container {
+  contain: layout style paint;
+}
+.group.peer {
+  transition-duration: 400ms !important;
+}
+
+.group.peer > div {
+  transition-duration: 400ms !important;
 }

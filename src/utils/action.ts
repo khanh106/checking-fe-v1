@@ -41,14 +41,7 @@ export const clearAuthenticateCookie = async () => {
   currentCookies.delete(COOKIE_KEYS.USER)
 }
 
-export const resolveLocale = async () => {
-  const currentCookies = await cookies()
-  let locale = currentCookies.get(COOKIE_KEYS.LOCALE)?.value
-  if (!locale || !LANGUAGE_CODES.includes(locale)) {
-    locale = defaultLocale
-  }
-  return locale
-}
+
 
 export const setLocaleCookie = async (locale: string) => {
   const currentCookies = await cookies()

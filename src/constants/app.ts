@@ -47,3 +47,30 @@ export const COOKIE_KEYS = {
     Other = 3,
     PreferNotToSay = 4,
   }
+
+  export const MENU_ITEMS = [
+    {
+      id: 'dashboard',
+      label: 'Dashboard',
+      path: '/',
+      icon: 'Dashboard'
+    },
+    {
+      id: 'attendance-history',
+      label: 'Lịch sử điểm danh',
+      path: '/attendance/history',
+      icon: 'History'
+    },
+    {
+      id: 'work-location',
+      label: 'Địa chỉ làm việc',
+      path: '/work-location',
+      icon: 'Location'
+    },
+    {
+      id: 'guide',
+      label: 'Hướng dẫn',
+      path: '/guide',
+      icon: 'Guide'
+    }
+  ] as const;

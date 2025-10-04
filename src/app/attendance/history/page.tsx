@@ -1,8 +1,14 @@
-export default function AttendanceHistoryPage() {
-    return (
-      <div>
-        <h1>Lịch sử điểm danh</h1>
-        <p>Nội dung trang sẽ được xây dựng ở đây.</p>
-      </div>
-    );
-  }
+import { AttendanceTable } from "@/modules/attendance/components/attendance-table";
+import { DateFilter } from "@/modules/attendance/components/date-filter";
+
+const AttendanceHistoryPage = () => {
+  return (
+    <div className="space-y-4 p-4">
+      <h1 className="text-2xl font-bold">Attendance History</h1>
+      <DateFilter />
+      <AttendanceTable />
+    </div>
+  );
+};
+
+export default AttendanceHistoryPage;

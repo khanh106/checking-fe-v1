@@ -1,12 +1,15 @@
 {
-    "loading": "Loading...",
-    "error": "An error occurred",
-    "success": "Success",
-    "cancel": "Cancel",
-    "confirm": "Confirm",
-    "save": "Save",
-    "edit": "Edit",
-    "delete": "Delete",
-    "back": "Back",
-    "next": "Next"
-  }
+  "loading": "Loading...",
+  "error": "An error occurred",
+  "success": "Success",
+  "cancel": "Cancel",
+  "confirm": "Confirm",
+  "save": "Save",
+  "edit": "Edit",
+  "delete": "Delete",
+  "back": "Back",
+  "next": "Next",
+  "MODAL_USER_SETTINGS_AND_PRIVACY_BUTTON": "Settings & Privacy",
+  "MODAL_USER_HELP_AND_SUPPORT_BUTTON": "Help & Support",
+  "MODAL_USER_LOGOUT_BUTTON": "Logout"
+}

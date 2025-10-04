@@ -1,31 +1,18 @@
-import { resolveLocale } from "@/utils/action"
-import { IntlErrorCode } from "next-intl"
-import { getRequestConfig } from "next-intl/server"
+import { getRequestConfig } from 'next-intl/server';
+import { notFound } from 'next/navigation';
 
-export const defaultLocale = "en"
-
-export default getRequestConfig(async () => {
-  // Provide a static locale, fetch a user setting,
-  // read from `cookies()`, `headers()`, etc.
-  const locale = await resolveLocale()
+import { locales } from '@/constants/languages';
+export const defaultLocale = 'vi';
+export default getRequestConfig(async ({ locale }) => {
+  if (!locales.includes(locale as any)) notFound();
 
   return {
-    locale,
+    timeZone: 'Asia/Ho_Chi_Minh',
     messages: {
       ...(await import(`../locales/${locale}/common.json`)).default,
+      ...(await import(`../locales/${locale}/layout.json`)).default,
       ...(await import(`../locales/${locale}/dashboard.json`)).default,
       ...(await import(`../locales/${locale}/attendance.json`)).default,
-      ...(await import(`../locales/${locale}/work-location.json`)).default,
-      ...(await import(`../locales/${locale}/guide.json`)).default,
     },
-    onError(error) {
-      if (error.code === IntlErrorCode.MISSING_MESSAGE) {
-        // Missing translations are expected and should only log an error
-        console.error(error.originalMessage)
-      }
-    },
-    getMessageFallback({ key }) {
-      return key
-    },
-  }
-})
+  };
+});
